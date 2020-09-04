@@ -29,7 +29,7 @@ spec:
         track: stable
     spec:
       containers:
-      - image: 240796/stable-version:v2
+      - image: 240796/stable-version:latest
         imagePullPolicy: IfNotPresent
         name: stable-version
         resources: {}

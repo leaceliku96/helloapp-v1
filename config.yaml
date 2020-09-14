@@ -21,7 +21,7 @@ spec:
   template:
     metadata:
       labels:
-        app: helloapp-v1
+        app: helloapp
         track: stable
     spec:
       containers:

@@ -30,5 +30,5 @@ spec:
       containers:
       - image: 240796/helloapp:v1
         imagePullPolicy: IfNotPresent
-        name: helloapp:v1
+        name: helloapp-v1
       restartPolicy: Always

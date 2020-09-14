@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: helloapp
+    version: v1
     track: stable
   name: helloapp-v1
   namespace: default
@@ -12,6 +13,7 @@ spec:
   selector:
     matchLabels:
       app: helloapp
+      version: v1
       track: stable
   strategy:
     rollingUpdate:
@@ -22,10 +24,11 @@ spec:
     metadata:
       labels:
         app: helloapp
+        version: v1
         track: stable
     spec:
       containers:
-      - image: 240796/stable-version:latest
+      - image: 240796/helloapp:v1
         imagePullPolicy: IfNotPresent
-        name: stable-version
+        name: helloapp:v1
       restartPolicy: Always

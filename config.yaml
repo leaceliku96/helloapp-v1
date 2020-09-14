@@ -2,16 +2,16 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: stable-version
+    app: helloapp-v1
     track: stable
-  name: stable-version
+  name: helloapp-v1
   namespace: default
 spec:
   progressDeadlineSeconds: 600
   replicas: 3
   selector:
     matchLabels:
-      app: stable-version
+      app: helloapp-v1
       track: stable
   strategy:
     rollingUpdate:
@@ -21,7 +21,7 @@ spec:
   template:
     metadata:
       labels:
-        app: stable-version
+        app: helloapp-v1
         track: stable
     spec:
       containers:
